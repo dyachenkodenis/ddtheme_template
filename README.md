@@ -1,2 +1,2 @@
 # wordpress_template
-General pattern news, shop, blog
+Simple Wordpress template (news, shop, blog)
