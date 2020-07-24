@@ -1,7 +1,15 @@
 /*
-Theme Name: Wordpress Theme
-Text Domain: wordpresstheme
-Version: 1.0
-Description: Wordpress Theme
-Author URI: 
+Theme Name: MyTheme
+Theme URI:	https://github.com/dyachenkodenis/wordpress_template
+Author:	
+Author URI: https://github.com/dyachenkodenis
+Description: MyTheme
+Version: 1.0.0
+License:
+License URI:
+Tags: mytheme, simple
+Text Domain: mytheme
+...
 */
+
+@import "css/wordpress_theme.css";

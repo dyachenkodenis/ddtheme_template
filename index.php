@@ -1,9 +1,18 @@
-<?php
-
-get_header();
+<?php 
+/**
+ * 
+ * @version     1.0.0
+ * @author      
+ * @link        
+ * @copyright   
+ * @license     
+ */
+if (!defined('ABSPATH')) { die(); }
 ?>
 
-	<section>
+<?php get_header();?>
+
+	<section class="row">
 	
 	</section>
 
