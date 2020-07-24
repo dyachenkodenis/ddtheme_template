@@ -1,0 +1,13 @@
+
+
+
+/* Navbar Start (bootstrap) */
+@media only screen and (max-width: 783px)  {
+.admin-bar .navbar-fixed-top {
+	top: 46px !important;
+}
+}
+.admin-bar .navbar-fixed-top {
+	top: 32px;
+}
+/* Navbar Stop (bootstrap) */
