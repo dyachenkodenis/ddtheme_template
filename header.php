@@ -1,15 +1,14 @@
 <?php 
 /**
- * 
+ * DDTheme Wordpress Theme
  * @version     1.0.0
  * @author      
  * @link        
- * @copyright   
+ * @copyright   2020 DDTheme
  * @license     
  */
 if (!defined('ABSPATH')) { die(); }
 ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>
@@ -58,7 +57,12 @@ if (!defined('ABSPATH')) { die(); }
 										)
 									);
 								}
-								?>
+								wp_nav_menu(
+									array(
+
+									)
+								);
+			?>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
