@@ -39,29 +39,14 @@ if (!defined('ABSPATH')) { die(); }
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <?php
-								if ( has_nav_menu( 'primary' ) ) {
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,											
-										)
-									);
-								}
+            <?php								
 								wp_nav_menu(
 									array(
-
+										'container'  => '',
+										'items_wrap' => '%3$s'
 									)
 								);
+
 			?>
           </ul>
         </div><!-- /.nav-collapse -->
