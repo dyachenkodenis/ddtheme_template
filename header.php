@@ -41,24 +41,22 @@ if (!defined('ABSPATH')) { die(); }
           <ul class="nav navbar-nav">
             <?php								
 								wp_nav_menu(
-									array(
-										'container'  => '',
-										'items_wrap' => '%3$s'
+									array(										
+										'items_wrap'    => '%3$s',
+										'container'		=> ''										
 									)
-								);
+								);								
 
 			?>
           </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </nav><!-- /.navbar -->
+        </div>
+      </div>
+    </nav>
 
-<div class="container">
-	<div class="row">
-		<div class="">
-
-	<header class="row">
-		
+<div class="container ddtheme-container">
+	 <div class="row row-offcanvas row-offcanvas-right">
+		<div class="col-md-12">
+			
+	<header>
+		<!-- Slider -->
 	</header>
-	
-	
