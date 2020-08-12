@@ -12,19 +12,24 @@ if (!defined('ABSPATH')) { die(); }
 
 <?php get_header(); ?>
 
-	
-	<section class="row">
-	
-	<article class="col-md-9">
-		
-	</article>
+	<div class="row">
 
-	<aside class="col-md-3">
-		
-	</aside>
-
-
+	<section class="col-md-8">	
+					<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+					<article>						
+						<h2><?php the_title(); ?></h2>						
+						<?php the_content(); ?>				
+					</article>
+					 <?php endwhile; else: ?>
+					 <article>
+      				<header>
+     				   <h1><?php _e('Error post'); ?></h1>
+     				</header>
+    				</article>
+ 					 <?php endif; ?>
 	</section>
+				<?php get_sidebar(); ?>
+</div>
 
 <?php
 
