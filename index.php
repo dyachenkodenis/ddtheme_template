@@ -11,20 +11,20 @@ if (!defined('ABSPATH')) { die(); }
 ?>
 
 <?php get_header(); ?>
+	
+	<div class="row">
 
-	
-	<section class="row">
-	
-	<article class="col-md-9">
-		
+	<section class="col-md-8">	
+	<?php while(have_posts()) : the_post(); ?>
+	<article class="col-md-12">
+	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 	</article>
+	<?php endwhile; ?>		
+	</section>	
+	
+	<?php get_sidebar(); ?>	
 
-	<aside class="col-md-3">
-		
-	</aside>
-
-
-	</section>
+	</div>
 
 <?php
 
