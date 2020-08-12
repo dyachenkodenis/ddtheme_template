@@ -12,9 +12,9 @@ if (!defined('ABSPATH')) { die(); }
 
 define('THEMEDIR', get_template_directory() . '/');
 define('THEMEURL', get_template_directory() . '/');
+define('THEMEDOMAIN', 'ddtheme');
 
 
 require THEMEDIR . 'include/ddtheme_disable.php';
 require THEMEDIR . 'include/ddtheme_template.php';
-
 
