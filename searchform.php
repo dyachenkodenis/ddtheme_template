@@ -9,3 +9,9 @@
  */
 if (!defined('ABSPATH')) { die(); }
 ?>
+<form role="form" method="get" action="<?php echo home_url( '/' ) ?>">	
+    <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s">    
+  <span>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+  </span>  
+</form>
