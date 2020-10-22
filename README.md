@@ -1,2 +1,2 @@
-# wordpress_template
-Simple Wordpress template (news, shop, blog)
+# wordpress template
+Простая Wordpress тема
