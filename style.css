@@ -1,10 +1,10 @@
 /*
 Theme Name: DDTheme
-Theme URI:	https://github.com/dyachenkodenis/ddtheme_template
-Author:	
+Theme URI:  https://github.com/dyachenkodenis/ddtheme_template
+Author: 
 Author URI: https://github.com/dyachenkodenis
 Description: DDTheme Wordpress template
-Version: 
+Version: 1.0.1
 License:
 License URI:
 Tags: mytheme, simple
@@ -12,5 +12,5 @@ Text Domain: DDTheme
 ...
 */
 
-@import "css/ddtheme_template.css";
+@import "assets/css/ddtheme_template.css";
 

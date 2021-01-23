@@ -1,7 +1,7 @@
 <?php 
 /**
  * DDTheme Wordpress Theme
- * @version     1.0.0
+ * @version     1.0.1
  * @author      
  * @link        
  * @copyright   2020 DDTheme
@@ -12,19 +12,19 @@ if (!defined('ABSPATH')) { die(); }
 
 <?php get_header(); ?>
 
-	<div class="row">
+    <div class="row">
 
-	<section class="col-md-8">	
-	<?php while(have_posts()) : the_post(); ?>
-	<article class="col-md-12">
-	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-	</article>
-	<?php endwhile; ?>		
-	</section>	
-	
-	<?php get_sidebar(); ?>	
+    <section class="col-md-8">  
+    <?php while(have_posts()) : the_post(); ?>
+    <article class="col-md-12">
+    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+    </article>
+    <?php endwhile; ?>      
+    </section>  
+    
+    <?php get_sidebar(); ?> 
 
-	</div>
+    </div>
 
 <?php
 

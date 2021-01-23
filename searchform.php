@@ -1,7 +1,7 @@
 <?php 
 /**
  * DDTheme Wordpress Theme
- * @version     1.0.0
+ * @version     1.0.1
  * @author      
  * @link        
  * @copyright   2020 DDTheme
@@ -9,7 +9,7 @@
  */
 if (!defined('ABSPATH')) { die(); }
 ?>
-<form role="form" method="get" action="<?php echo home_url( '/' ) ?>">	
+<form role="form" method="get" action="<?php echo home_url( '/' ) ?>">  
     <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s">    
   <span>
     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
