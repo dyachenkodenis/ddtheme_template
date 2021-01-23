@@ -16,5 +16,7 @@ define('THEMEDOMAIN', 'ddtheme');
 
 
 require THEMEDIR . 'include/ddtheme_disable.php';
+require THEMEDIR . 'include/ddtheme_support.php';
+require THEMEDIR . 'include/ddtheme_style.php';
 require THEMEDIR . 'include/ddtheme_template.php';
 
