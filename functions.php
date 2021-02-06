@@ -1,22 +1,20 @@
-<?php 
+<?php if (!defined('ABSPATH')) { die(); }
 /**
- * DDTheme Wordpress Theme
- * @version     1.0.1
+ * Basic Wordpress Theme
+ * @version     2.0.0
  * @author      
  * @link        
- * @copyright   2020 DDTheme
+ * @copyright   2021 Basic Wordpress Theme
  * @license     
  */
 
-if (!defined('ABSPATH')) { die(); }
-
 define('THEMEDIR', get_template_directory() . '/');
 define('THEMEURL', get_template_directory() . '/');
-define('THEMEDOMAIN', 'ddtheme');
+define('THEMEDOMAIN', 'simpledwptemplate');
 
 
-require THEMEDIR . 'include/ddtheme_disable.php';
-require THEMEDIR . 'include/ddtheme_support.php';
-require THEMEDIR . 'include/ddtheme_style.php';
-require THEMEDIR . 'include/ddtheme_template.php';
+require THEMEDIR . 'inc/wp_support.php';
+require THEMEDIR . 'inc/wp_disable.php';
+require THEMEDIR . 'inc/wp_style.php';
+require THEMEDIR . 'inc/wp_additional_template.php';
 

@@ -1,2 +1,2 @@
 # wordpress template
-Простая Wordpress тема
+Базовый шаблон Wordpress

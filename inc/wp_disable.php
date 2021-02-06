@@ -1,14 +1,14 @@
-<?php 
+<?php if (!defined('ABSPATH')) { die(); }
 /**
- * DDTheme Wordpress Theme
- * @version     1.0.1
+ * Basic Wordpress Theme
+ * @version     2.0.0
  * @author      
  * @link        
- * @copyright   2020 DDTheme
+ * @copyright   2021 Basic Wordpress Theme
  * @license     
  */
 
-if (!defined('ABSPATH')) { die(); }
+
 /**
  * Disable Emoji support introduced in WP 4.2
  */
