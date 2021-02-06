@@ -36,25 +36,24 @@ if (!defined('ABSPATH')) { die(); }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php get_home_url(); ?>"><?php bloginfo('name'); ?></a>
+          <a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <?php                               
                                 wp_nav_menu(
-                                    array(                                      
+                                    array(                
                                         'items_wrap'    => '%3$s',
-                                        'container'     => ''                                       
+                                        'container'     => ''  
                                     )
-                                );                              
-
+                                );
             ?>
           </ul>
         </div>
       </div>
     </nav>
 
-<div class="container ddtheme-container">
+<div class="container wp-container">
      <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-md-12">
             
