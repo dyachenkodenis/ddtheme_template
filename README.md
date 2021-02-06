@@ -1,2 +1,5 @@
-# wordpress template
-Базовый шаблон Wordpress
+# Basic Wordpress Template
+
+Базовый шаблон для Wordpress.
+
+
