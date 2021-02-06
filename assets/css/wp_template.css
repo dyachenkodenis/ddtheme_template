@@ -1,6 +1,5 @@
 
 
-
 /* Navbar Start (bootstrap) */
 @media only screen and (max-width: 783px)  {
 .admin-bar .navbar-fixed-top {
@@ -11,8 +10,8 @@
     top: 32px;
 }
 /*  */
-.ddtheme-container{
-    margin-top: 51px !important;
+.wp-container{
+    margin: 73px auto !important;
 }
 /* Navbar Stop (bootstrap) */
 
