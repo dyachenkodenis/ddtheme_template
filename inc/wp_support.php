@@ -40,7 +40,7 @@ add_post_type_support( 'post',
                     );
 
 
-add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'video' ) );
 
 add_theme_support( 'custom-header', array(
         'default-image' => '',
@@ -73,36 +73,24 @@ add_theme_support( 'admin-bar', [ 'callback'=>'__return_false' ] );
 
 add_theme_support( 'responsive-embeds' );
 
-/* Widget Start*/
-register_sidebar( array(
-        'name'          => __( 'Sidebar', 'ddtheme' ),
-        'id'            => 'sidebar-1',
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );    
-/* Widget Stop*/
-
-
 /* Menu Start */
 add_filter( 'nav_menu_css_class', '__return_empty_array' );
-add_filter( 'nav_menu_css_class', 'test_li', 10, 4 );
+add_filter( 'nav_menu_css_class', 'wp_li', 10, 4 );
 
-function test_li( $classes, $item, $args, $depth ) {
+function wp_li( $classes, $item, $args, $depth ) {
         $classes[] = 'menu__item';  
     return $classes;
 }
-add_filter( 'nav_menu_link_attributes', 'test_a', 10, 3 );
+add_filter( 'nav_menu_link_attributes', 'wp_a', 10, 3 );
 
-function test_a( $atts, $item, $args ) {
+function wp_a( $atts, $item, $args ) {
     $class = 'menu__link'; // or something based on $item
     $atts['class'] = $class;
     return $atts;
 }
 /* Menu Stop */
 
-
+//кнопка: выровнить текст по ширине
 /* Button MCE Start */
 function my_mce_buttons_2( $buttons ) { 
     $buttons[] = 'underline';

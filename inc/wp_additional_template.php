@@ -17,39 +17,39 @@ function ddtheme_widgets_init() {
 
     // Register default sidebar
     register_sidebar( array(
-        'name'          => __( 'Sidebar', 'ddtheme' ),
+        'name'          => __( 'Sidebar', 'simpledwptemplate' ),
         'id'            => 'sidebar-1',
         'before_widget' => '<div class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
+        'before_title'  => '<h3>',
         'after_title'   => '</h3>',
     ) );
 
     // Register footer sidebars
     register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 1', 'ddtheme' ),
+        'name'          => __( 'Footer Widget Area 1', 'simpledwptemplate' ),
         'id'            => 'footer-w1',
         'before_widget' => '<aside class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h3 class="footer-widget-title"><span>',
+        'before_title'  => '<h3><span>',
         'after_title'   => '</span></h3>',
     ) );
  
     register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 2', 'ddtheme' ),
+        'name'          => __( 'Footer Widget Area 2', 'simpledwptemplate' ),
         'id'            => 'footer-w2',
         'before_widget' => '<aside class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h3 class="footer-widget-title"><span>',
+        'before_title'  => '<h3><span>',
         'after_title'   => '</span></h3>',
     ) );
 
     register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 3', 'ddtheme' ),
+        'name'          => __( 'Footer Widget Area 3', 'simpledwptemplate' ),
         'id'            => 'footer-w3',
         'before_widget' => '<aside class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h3 class="footer-widget-title"><span>',
+        'before_title'  => '<h3><span>',
         'after_title'   => '</span></h3>',
     ) );
     
@@ -90,7 +90,7 @@ function ddtheme_pagination_posts_nav() {
         $links[] = $paged + 1;
     }
 
-    echo '<div class="navigation"><ul class="pagination">' . "\n";
+    echo '<div><ul>' . "\n";
 
     /** Previous Post Link */
     if ( get_previous_posts_link() )
