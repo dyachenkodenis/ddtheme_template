@@ -1,12 +1,12 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
- * Basic Wordpress Theme
- * @version     2.0.0
- * @author      
- * @link        
- * @copyright   2021 Basic Wordpress Theme
- * @license     
- */
+* Wordpress Theme
+* @version     3.0.0
+* @author
+* @link
+* @copyright   2021 Wordpress Theme
+* @license
+*/
 
   //Disable Emoji
   remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

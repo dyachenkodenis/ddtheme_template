@@ -1,12 +1,12 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
- * Basic Wordpress Theme
- * @version     2.0.0
- * @author      
- * @link        
- * @copyright   2021 Basic Wordpress Theme
- * @license     
- */
+* Wordpress Theme
+* @version     3.0.0
+* @author
+* @link
+* @copyright   2021 Wordpress Theme
+* @license
+*/
 
 if (!defined('ABSPATH')) { die(); }
 
@@ -40,7 +40,7 @@ add_post_type_support( 'post',
                     );
 
 
-add_theme_support( 'post-thumbnails', array( 'post', 'page', 'video' ) );
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'video', 'slide' ) );
 
 add_theme_support( 'custom-header', array(
         'default-image' => '',

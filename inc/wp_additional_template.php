@@ -1,19 +1,19 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
- * Basic Wordpress Theme
- * @version     2.0.0
- * @author      
- * @link        
- * @copyright   2021 Basic Wordpress Theme
- * @license     
- */
+* Wordpress Theme
+* @version     3.0.0
+* @author
+* @link
+* @copyright   2021 Wordpress Theme
+* @license
+*/
 
 if (!defined('ABSPATH')) { die(); }
 
 
 /* WIDGET START*/
 
-function ddtheme_widgets_init() {
+function theme_widgets_init() {
 
     // Register default sidebar
     register_sidebar( array(
@@ -54,14 +54,14 @@ function ddtheme_widgets_init() {
     ) );
     
  }
-add_action( 'widgets_init', 'ddtheme_widgets_init' );
+add_action( 'widgets_init', 'theme_widgets_init' );
 
 
 
 /* WIDGET STOP*/
 
 /* PAGINATION START */
-function ddtheme_pagination_posts_nav() {
+function theme_pagination_posts_nav() {
 
     if( is_singular() )
         return;
@@ -151,6 +151,4 @@ function create_post_type(){
 add_post_type_support('slide', array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ));
 /* SLIDER STOP */
 
-add_theme_support( 'post-thumbnails', array( 'post', 'movie', 'page', 'slide' ) );
-add_theme_support('post-formats', array( 'aside', 'gallery', 'chat', 'link', 'image', 'quote', 'status', 'video'));
 
