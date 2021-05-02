@@ -1,10 +1,10 @@
 <?php
 /**
-* Basic Wordpress Theme
-* @version     2.0.0
+* Wordpress Theme
+* @version     3.0.0
 * @author
 * @link
-* @copyright   2021 Basic Wordpress Theme
+* @copyright   2021 Wordpress Theme
 * @license
 */
 if (!defined('ABSPATH')) { die(); }
