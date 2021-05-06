@@ -8,8 +8,8 @@
 * @license
 */
 
-define('THEMEDIR', get_template_directory() . '/');
-define('THEMEURL', get_template_directory() . '/');
+define('THEMEDIR', get_template_directory() . '/'); // home/.../.../wp-content/themes/name-theme/
+define('THEMEURL', get_template_directory_uri() . '/'); // http://example.com/wp-content/themes/name-theme/
 define('THEMEDOMAIN', 'simpledwptemplate');
 
 
