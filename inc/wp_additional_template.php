@@ -1,14 +1,16 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
 * Wordpress Theme
-* @version     3.0.0
+* @version     1.0.0
 * @author
 * @link
 * @copyright   2021 Wordpress Theme
 * @license
+* @package WordPress
+* @subpackage Wordpress Theme
+* @since Wordpress Theme 1.0
 */
 
-if (!defined('ABSPATH')) { die(); }
 
 
 /* WIDGET START*/
@@ -24,34 +26,7 @@ function theme_widgets_init() {
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
     ) );
-
-    // Register footer sidebars
-    register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 1', 'simpledwptemplate' ),
-        'id'            => 'footer-w1',
-        'before_widget' => '<aside class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h3><span>',
-        'after_title'   => '</span></h3>',
-    ) );
  
-    register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 2', 'simpledwptemplate' ),
-        'id'            => 'footer-w2',
-        'before_widget' => '<aside class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h3><span>',
-        'after_title'   => '</span></h3>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => __( 'Footer Widget Area 3', 'simpledwptemplate' ),
-        'id'            => 'footer-w3',
-        'before_widget' => '<aside class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h3><span>',
-        'after_title'   => '</span></h3>',
-    ) );
     
  }
 add_action( 'widgets_init', 'theme_widgets_init' );
@@ -90,7 +65,7 @@ function theme_pagination_posts_nav() {
         $links[] = $paged + 1;
     }
 
-    echo '<div><ul>' . "\n";
+    echo '<div><ul class="pagination">' . "\n";
 
     /** Previous Post Link */
     if ( get_previous_posts_link() )

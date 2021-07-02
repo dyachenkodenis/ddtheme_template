@@ -12,9 +12,7 @@
 */
 if (!defined('ABSPATH')) { die(); }
 ?>
-
-
-<?php get_header(); ?>
-
-
-<?php get_footer(); ?>
+<div class="" itemscope>
+        <h1 itemprop="name"><?php bloginfo('name'); ?></h1>
+        <p itemprop="description"><?php bloginfo('description'); ?></p>     
+</div>

@@ -1,21 +1,27 @@
 <?php
 /**
 * Wordpress Theme
-* @version     3.0.0
+* @version     1.0.0
 * @author
 * @link
 * @copyright   2021 Wordpress Theme
 * @license
+* @package WordPress
+* @subpackage Wordpress Theme
+* @since Wordpress Theme 1.0
 */
 if (!defined('ABSPATH')) { die(); }
 ?>
-<?php get_header(); ?>
+<?php get_header(); ?> 
 <div class="row">
     <section class="col-md-8">
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-        <article>
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
+         <article itemscope itemtype="http://schema.org/Article">
+            <h2 itemprop="name"><?php the_title(); ?></h2>
+            <span><?php the_time('j F Y'); ?></span>
+            <span><?php the_author(); ?></span>
+            <span><?php the_tags(); ?></span>
+             <div itemprop="articleBody"><?php the_content(); ?></div>
         </article>
         <?php endwhile; else: ?>
         <article>

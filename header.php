@@ -1,11 +1,14 @@
 <?php
 /**
 * Wordpress Theme
-* @version     3.0.0
+* @version     1.0.0
 * @author
 * @link
 * @copyright   2021 Wordpress Theme
 * @license
+* @package WordPress
+* @subpackage Wordpress Theme
+* @since Wordpress Theme 1.0
 */
 if (!defined('ABSPATH')) { die(); }
 ?>
@@ -18,9 +21,11 @@ if (!defined('ABSPATH')) { die(); }
     <meta name="HandheldFriendly" content="true"/> 
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon-16x16.png"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <?php wp_site_icon(); ?>
+
     <link rel="manifest" href="/site.webmanifest">
 
     <meta property="og:type" content="website"/>
@@ -31,13 +36,18 @@ if (!defined('ABSPATH')) { die(); }
     <meta property="og:image" content=""/>
     <meta property="og:url" content=""/>
 
+   
+
     <?php wp_head(); ?>
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css"> 
 
   </head>
   <body <?php body_class(); ?>>
+
+
     <?php wp_body_open(); ?>
+
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -47,23 +57,57 @@ if (!defined('ABSPATH')) { die(); }
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
+
+          <?php 
+            if( has_custom_logo() ){             
+              echo get_custom_logo();
+            }else{            
+             ?><a class="navbar-brand" href="/"><?php bloginfo('name'); ?> </a><?php           
+            }
+          ?>
+          
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
+         
             <?php
-                                wp_nav_menu(
-                                    array(
-                                        'items_wrap'    => '%3$s',
-                                        'container'     => ''
+                               wp_nav_menu(
+                                    array(                                       
+                                        //'theme_location'  => '',
+                                        'menu'            => 'Primary',
+                                        'container'       => '',
+                                        //'container_class' => '',
+                                        //'container_id'    => '',
+                                        //'menu_class'      => '',
+                                        //'menu_id'         => '',
+                                        //'echo'            => true,
+                                        //'fallback_cb'     => 'wp_page_menu',
+                                        //'before'          => '',
+                                        //'after'           => '',
+                                        //'link_before'     => '',
+                                        //'link_after'      => '',
+                                        'items_wrap'      => '<ul class="nav navbar-nav">%3$s</ul>',
+
+                                        //'depth'           => 0,
+                                        'walker'          => new WalkerWordpressTheme(),                                                                                                          
                                     )
                                 );
+
+                               
             ?>
-          </ul>
+         
         </div>
       </div>
     </nav>
+
+
+    
     <div class="container wp-container">
+
+      <?php get_template_part('template-parts/header/top-header'); ?>
+
+      <?php get_template_part('template-parts/header/custom_header'); ?>
+
+
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-md-12">
           

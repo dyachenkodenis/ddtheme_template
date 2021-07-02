@@ -1,11 +1,14 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
 * Wordpress Theme
-* @version     3.0.0
+* @version     1.0.0
 * @author
 * @link
 * @copyright   2021 Wordpress Theme
 * @license
+* @package WordPress
+* @subpackage Wordpress Theme
+* @since Wordpress Theme 1.0
 */
 
 // Start Javascript

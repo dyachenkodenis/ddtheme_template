@@ -1,14 +1,15 @@
 <?php if (!defined('ABSPATH')) { die(); }
 /**
 * Wordpress Theme
-* @version     3.0.0
+* @version     1.0.0
 * @author
 * @link
 * @copyright   2021 Wordpress Theme
 * @license
+* @package WordPress
+* @subpackage Wordpress Theme
+* @since Wordpress Theme 1.0
 */
-
-if (!defined('ABSPATH')) { die(); }
 
 
 add_theme_support(  'post-formats', 
@@ -43,9 +44,20 @@ add_post_type_support( 'post',
 add_theme_support( 'post-thumbnails', array( 'post', 'page', 'video', 'slide' ) );
 
 add_theme_support( 'custom-header', array(
-        'default-image' => '',
-        'video' => true,
-        'video-active-callback'  => 'is_front_page'
+    'default-image'          => '',
+    'random-default'         => false,
+    'width'                  => 0,
+    'height'                 => 0,
+    'flex-height'            => false,
+    'flex-width'             => false,
+    'default-text-color'     => '',
+    'header-text'            => true,
+    'uploads'                => true,
+    'wp-head-callback'       => '',
+    'admin-head-callback'    => '',
+    'admin-preview-callback' => '', 
+    'video'                  => true,
+    'video-active-callback'  => 'is_front_page'
 ) );
 
 add_theme_support( 'automatic-feed-links' );
@@ -60,9 +72,11 @@ add_theme_support( 'html5', array(
 
 add_theme_support( 'title-tag' );
 
+add_theme_support( 'custom-background' );
+
 add_theme_support( 'custom-logo', [
-    'height'      => 190,
-    'width'       => 190,
+    'height'      => 50,
+    'width'       => 150,
     'flex-width'  => false,
     'flex-height' => false,
     'header-text' => '',
