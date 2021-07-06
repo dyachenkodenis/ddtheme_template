@@ -18,16 +18,9 @@ class WalkerWordpressTheme extends Walker_Nav_Menu
 	function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) 
 	{
 		
-		$title = $item->title; // title menu
-		//$permalink = $item->url; // url menu
-		//$parent = $item->menu_item_parent; // является ли child menu        
+		$title = $item->title; // title item-menu
 		
-		//print_r($item);   
-	 
-	  	
-
-	$output .= "<li><a href='".$item->url."' >".$title."</a></li>";
-
+		$output .= "<li><a href='".$item->url."' >".$title."</a></li>";
 	  
 	}
 	function end_el(&$output, $item, $depth = 0, $args = null)
