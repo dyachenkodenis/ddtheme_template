@@ -8,3 +8,14 @@ License:
 License URI: 
 
 === Structure ===
+
+///////PAGE/////////
+
+page.php
+page-test.php
+index.php
+
+//////POST/////////
+
+single.php
+single-test.php
