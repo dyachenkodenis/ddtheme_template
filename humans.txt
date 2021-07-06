@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+
+Developer: User One
+Contact: 
+Twitter: 
+From: 
+
+Developer: User Two
+Contact: 
+Twitter: 
+From:
+
+/* SITE */
+Language: English
+Doctype: HTML5
+IDE: 
+Framework: 
+Components: 
