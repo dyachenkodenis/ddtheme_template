@@ -1,6 +1,7 @@
 <?php
 /**
 * Wordpress Theme
+* Template Name: Page Default
 * @version     1.0.0
 * @author
 * @link

@@ -1,6 +1,7 @@
 <?php
 /**
 * Wordpress Theme
+* Template Name: Index Page
 * @version     1.0.0
 * @author
 * @link
