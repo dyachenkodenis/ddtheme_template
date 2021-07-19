@@ -15,8 +15,8 @@
 if (!defined('ABSPATH')) { die(); }
 ?>
 <?php get_header(); ?> 
-<div class="row">
-    <section class="col-md-8">
+<div>
+    <section>
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
          <article itemscope itemtype="http://schema.org/Article">
             <h2 itemprop="name"><?php the_title(); ?></h2>

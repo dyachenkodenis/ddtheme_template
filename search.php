@@ -13,15 +13,15 @@
 if (!defined('ABSPATH')) { die(); }
 ?>
 <?php get_header(); ?>
-<div class="row">
+<div>
     
-    <section class="col-md-12">
+    <section>
         <?php get_search_form(); ?>
     </section>
     
-    <section class="col-md-8">
+    <section>
         <?php while(have_posts()) : the_post(); ?>
-        <article class="col-md-12">
+        <article>
             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         </article>
         <?php endwhile; ?>

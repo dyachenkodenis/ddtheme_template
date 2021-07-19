@@ -21,53 +21,84 @@ if (!defined('ABSPATH')) { die(); }
     <meta name="HandheldFriendly" content="true"/> 
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-    <meta name="description" content="">
+    <title><?php the_title(); ?></title>
+
+    <meta name="description" content="<?php bloginfo('description'); ?>">   
+
     <meta name="author" content="">
 
-    <?php wp_site_icon(); ?>
+    <link rel="manifest" href="<?php echo THEMEURL; ?>site.webmanifest">
 
-    <link rel="manifest" href="/site.webmanifest">
-
-    <meta property="og:type" content="website"/>
-    <meta property="og:image:width" content=""/>
-    <meta property="og:image:height" content=""/>
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:locale" content="" /> 
+    <meta property="og:type" content="website"/><?php /*get_post_type();*/ ?>
+    <meta property="og:title" content=""/>  
     <meta property="og:image" content=""/>
     <meta property="og:url" content=""/>
+    <meta property="og:description" content="" /> 
+    <meta property="og:site-name" content="" /> 
+    <meta property="og:description" content="" /> 
+    <meta property="og:video" content="" /> 
+    <meta property="og:audio" content="" /> 
+    <meta property="fb:app_id" content="" />
 
-   
+    <meta name="twitter:card" content="">
+    <meta property="twitter:title" content=""/>  
+    <meta property="twitter:image" content=""/>     
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:creator" content="" />
+    <meta property="twitter:domain" content=""/>    
+    <meta property="twitter:site" content=""/>    
+    <meta property="twitter:url" content=""/>    
+    <script type="application/ld+json">
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "<?php echo home_url(); ?>",
+          "title": "<?php bloginfo('name'); ?>",
+          "description": "<?php bloginfo('description'); ?>",
+          "type": "object",
+          "logo": {
+          "@type": "ImageObject",
+          "url": "<?php 
+            if( has_custom_logo() ){             
+              echo get_custom_logo();
+            }else{
+              echo THEMEURL.'assets/img/logo.jpg';?>"
+            }
+          }
+      </script>
 
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
+
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css"> 
+
+    <?php if(is_user_logged_in() ){ ?>
+        <style>
+          html { margin-top: 28px !important; }
+          * html body { margin-top: 28px !important; }
+        </style>  
+    <?php } ?>
 
   </head>
   <body <?php body_class(); ?>>
 
-
     <?php wp_body_open(); ?>
 
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">MENU</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
+    <nav>
+      <div>
+        <div>
+        
 
           <?php 
             if( has_custom_logo() ){             
               echo get_custom_logo();
             }else{            
-             ?><a class="navbar-brand" href="/"><?php bloginfo('name'); ?> </a><?php           
+             ?><a href="/"><?php bloginfo('name'); ?> </a><?php           
             }
           ?>
           
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div>
          
             <?php
                                wp_nav_menu(
@@ -85,7 +116,7 @@ if (!defined('ABSPATH')) { die(); }
                                         //'after'           => '',
                                         //'link_before'     => '',
                                         //'link_after'      => '',
-                                        'items_wrap'      => '<ul class="nav navbar-nav">%3$s</ul>',
+                                        'items_wrap'      => '<ul>%3$s</ul>',
 
                                         //'depth'           => 0,
                                         'walker'          => new WalkerWordpressTheme(),                                                                                                          
@@ -101,15 +132,13 @@ if (!defined('ABSPATH')) { die(); }
 
 
     
-    <div class="container wp-container">
-
-      <?php get_template_part('template-parts/header/top-header'); ?>
+    <div>
 
       <?php get_template_part('template-parts/header/custom_header'); ?>
 
 
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-md-12">
+      <div>
+        <div>
           
           <header>
             <!-- Slider -->

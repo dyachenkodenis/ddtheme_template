@@ -11,8 +11,8 @@
 * @since Wordpress Theme 1.0
 */
 
-define('THEMEDIR', get_template_directory() . '/'); // home/.../.../wp-content/themes/name-theme/
-define('THEMEURL', get_template_directory_uri() . '/'); // http://example.com/wp-content/themes/name-theme/
+define('THEMEDIR', get_template_directory() . '/'); // relative link
+define('THEMEURL', get_template_directory_uri() . '/'); // absolute link
 define('THEMEDOMAIN', 'simpledwptemplate');
 
 
@@ -26,3 +26,7 @@ require THEMEDIR . 'inc/acf-options.php';
 require THEMEDIR . 'inc/woocommerce-options.php';
 //Walker Menu
 require THEMEDIR . 'inc/wp-walker.php';
+//Walker Menu
+require THEMEDIR . 'inc/polylang.php';
+
+

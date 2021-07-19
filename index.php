@@ -15,16 +15,20 @@ if (!defined('ABSPATH')) { die(); }
 ?>
 <?php get_header(); ?>
 
-<div class="row">
-    <section class="col-md-8">
+<?php pll_e('read_more'); ?>
+
+<div>
+    <section>
         <?php while(have_posts()) : the_post(); ?>
-        <article class="col-md-12">
+        <article>
             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         </article>
         <?php endwhile; ?>
     </section>
-    
+
+
     <?php get_sidebar(); ?>
 </div>
 <?php
 get_footer();
+

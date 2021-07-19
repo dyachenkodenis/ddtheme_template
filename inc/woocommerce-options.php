@@ -15,7 +15,7 @@
 //////////////////////////////
 
 //remove menu item///////////////////
-add_filter ( 'woocommerce_account_menu_items', 'remove_my_account_links' );
+/*add_filter ( 'woocommerce_account_menu_items', 'remove_my_account_links' );
 function remove_my_account_links( $menu_links ){
 	
 	//unset( $menu_links['edit-address'] ); // Addresses	
@@ -27,21 +27,21 @@ function remove_my_account_links( $menu_links ){
 	//unset( $menu_links['customer-logout'] ); // Remove Logout link
 	
 	return $menu_links;	
-}
+}*/
 
 //rename menu item////////////////////////
-add_filter ( 'woocommerce_account_menu_items', 'rename_my_account_links' );
+/*add_filter ( 'woocommerce_account_menu_items', 'rename_my_account_links' );
 function rename_my_account_links( $menu_links ){
 	
 	// $menu_links['TAB ID HERE'] = 'NEW TAB NAME HERE';
 	$menu_links['downloads'] = 'My Files';
 
 	return $menu_links;
-}
+}*/
 
 
 //add item one method//////////////////////
-add_filter ( 'woocommerce_account_menu_items', 'one_more_link' );
+/*add_filter ( 'woocommerce_account_menu_items', 'one_more_link' );
 function one_more_link( $menu_links ){
 
 	// we will hook "anyuniquetext123" later
@@ -56,12 +56,10 @@ function one_more_link( $menu_links ){
 	+ array_slice( $menu_links, 1, NULL, true );
 
 
-	return $menu_links;
- 
- 
-}
+	return $menu_links; 
+}*/
 
-add_filter( 'woocommerce_get_endpoint_url', 'hook_endpoint', 10, 4 );
+/*add_filter( 'woocommerce_get_endpoint_url', 'hook_endpoint', 10, 4 );
 function hook_endpoint( $url, $endpoint, $value, $permalink ){
  
 	if( $endpoint === 'anyuniquetext123' ) {
@@ -72,7 +70,7 @@ function hook_endpoint( $url, $endpoint, $value, $permalink ){
 	}
 	return $url;
  
-}
+}*/
 
 /*
 body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--anyuniquetext123 a:before{
@@ -85,7 +83,7 @@ body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--anyuniquet
 /*
  * Step 1. Add Link (Tab) to My Account menu
  */
-add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
+/*add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
 function misha_log_history_link( $menu_links ){
 	
 	$menu_links = array_slice( $menu_links, 0, 5, true ) 
@@ -94,27 +92,27 @@ function misha_log_history_link( $menu_links ){
 	
 	return $menu_links;
 
-}
+}*/
 /*
  * Step 2. Register Permalink Endpoint
  */
-add_action( 'init', 'misha_add_endpoint' );
+/*add_action( 'init', 'misha_add_endpoint' );
 function misha_add_endpoint() {
 
 	// WP_Rewrite is my Achilles' heel, so please do not ask me for detailed explanation
 	add_rewrite_endpoint( 'log-history', EP_PAGES );
 
-}
+}*/
 /*
  * Step 3. Content for the new page in My Account, woocommerce_account_{ENDPOINT NAME}_endpoint
  */
-add_action( 'woocommerce_account_log-history_endpoint', 'misha_my_account_endpoint_content' );
+/*add_action( 'woocommerce_account_log-history_endpoint', 'misha_my_account_endpoint_content' );
 function misha_my_account_endpoint_content() {
 
 	// of course you can print dynamic content here, one of the most useful functions here is get_current_user_id()
 	echo 'Last time you logged in: yesterday from Safari.';
 
-}
+}*/
 /*
  * Step 4
  */
@@ -128,9 +126,7 @@ body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--log-histor
 */
 
 //////after and before
-
-
-
+/*
 add_action('woocommerce_before_account_navigation', 'misha_some_content_before');
 function misha_some_content_before(){
 	echo 'blah blah blah before';
@@ -143,3 +139,4 @@ function misha_some_content_after(){
 	<?php
 }
 
+*/

@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('ABSPATH')) { die(); }
 /**
 * Wordpress Theme
 * @version     1.0.0
@@ -10,11 +10,5 @@
 * @subpackage Wordpress Theme
 * @since Wordpress Theme 1.0
 */
-if (!defined('ABSPATH')) { die(); }
-?>
-<aside>
-    <?php
-    if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')):
-    ?>
-    <?php endif; ?>
-</aside>
+
+//pll_register_string('{key}', '{string}', 'true');

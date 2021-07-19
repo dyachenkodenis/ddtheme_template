@@ -11,10 +11,7 @@
 * @since Wordpress Theme 1.0
 */
 
-
-
 /* WIDGET START*/
-
 function theme_widgets_init() {
 
     // Register default sidebar
@@ -25,14 +22,9 @@ function theme_widgets_init() {
         'after_widget'  => '</div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
-    ) );
- 
-    
+    ) );    
  }
 add_action( 'widgets_init', 'theme_widgets_init' );
-
-
-
 /* WIDGET STOP*/
 
 /* PAGINATION START */
@@ -65,7 +57,7 @@ function theme_pagination_posts_nav() {
         $links[] = $paged + 1;
     }
 
-    echo '<div><ul class="pagination">' . "\n";
+    echo '<div><ul>' . "\n";
 
     /** Previous Post Link */
     if ( get_previous_posts_link() )
@@ -107,7 +99,7 @@ function theme_pagination_posts_nav() {
 /* PAGINATION STOP */
 
 /* SLIDER START */
-add_action('init', 'create_post_type');
+/*add_action('init', 'create_post_type');
 function create_post_type(){
     register_post_type('slide',
         array(
@@ -123,7 +115,7 @@ function create_post_type(){
         )
     );     
 }
-add_post_type_support('slide', array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ));
+add_post_type_support('slide', array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ));*/
 /* SLIDER STOP */
 
 
